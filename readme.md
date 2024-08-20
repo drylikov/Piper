@@ -1,4 +1,4 @@
-# piper
+# Piper
 
 Random password generator
 
