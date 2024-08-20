@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Piper: Random Password Generator</title>
+
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Random password generator" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <meta name="apple-mobile-web-app-title" content="Piper" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css?v=15" />
+  <link rel="icon" type="image/png" href="images/icons/icon-512x512.png" />
+</head>
+<body>
+  <div id="app">
+    <h1 id="appTitle">      
+    </h1>
+
+    <div id="generatedPasswordWrapper">
+      <input
+        readonly
+        type="text"
+        id="generatedPassword"
+      />
+
+      <div id="generateNewPassword" title="Generate">g</div>
+      <div id="copyPassword" title="Copy">c</div>
+    </div>
+
+    <div id="passwordStrength">
+      <div id="passwordStrengthTrack"></div>
+    </div>
+
+    <div id="options">
+      <div class="option1">
+        <div class="optionTitle">
+          Length
+        </div>
+
+        <div
+          id="lengthValue"
+          class="optionValue"></div>
+
+        <input
+          min="1"
+          max="36"
+          type="range"
+          data-id="length"
+          class="optionRange"
+        />
+      </div>
+
+      <div class="option2">
+        <div
+          data-id="lowercase"
+          class="optionCheckboxWrapper"
+        >
+          <div class="optionCheckbox"></div>
+
+          <div class="optionCheckboxBigTitle">
+            Lowercase
+          </div>
+        </div>
+
+        <div class="optionCheckboxSmallTitle">
+          abc
+        </div>
+      </div>
+
+      <div class="option2">
+        <div
+          data-id="uppercase"
+          class="optionCheckboxWrapper"
+        >
+          <div class="optionCheckbox"></div>
+
+          <div class="optionCheckboxBigTitle">
+            Uppercase
+          </div>
+        </div>
+
+        <div class="optionCheckboxSmallTitle">
+          ABC
+        </div>
+      </div>
+
+      <div class="option2">
+        <div
+          data-id="digits"
+          class="optionCheckboxWrapper"
+        >
+          <div class="optionCheckbox"></div>
+
+          <div class="optionCheckboxBigTitle">
+            Digits
+          </div>
+        </div>
+
+        <div class="optionCheckboxSmallTitle">
+          123
+        </div>
+      </div>
+
+      <div class="option2">
+        <div
+          data-id="symbols"
+          class="optionCheckboxWrapper"
+        >
+          <div class="optionCheckbox"></div>
+
+          <div class="optionCheckboxBigTitle">
+            Symbols
+          </div>
+        </div>
+
+        <div class="optionCheckboxSmallTitle">
+          #$&
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=12"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bodyTextColor: #ddd;
+    --bodyBackgroundColor: #444;
+    --checkboxColor: #616060;
+    --checkboxSelectedColor: #807e7e;
+    --gitHubIcon: url('images/github/github-light.png');
+    --twitterIcon: url('images/twitter/twitter-light.png');
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bodyTextColor: #000;
+    --bodyBackgroundColor: #fff;
+    --checkboxColor: #efefef;
+    --checkboxSelectedColor: #d5d5d5;
+    --gitHubIcon: url('images/github/github-dark.png');
+    --twitterIcon: url('images/twitter/twitter-dark.png');
+  }
+}
+
+:root {
+  --borderRadius: 4px;
+}
+
+body {
+  margin: 0;
+  color: var(--bodyTextColor);
+  background-color: var(--bodyBackgroundColor);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, input, button {
+  font-size: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+#app {
+  margin: auto;
+}
+@media (max-width: 576px) {
+  #app {
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 577px) {
+  #app {
+    width: 500px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+#appTitle {
+  margin-top: 0;
+  font-size: 48px;
+  line-height: 54px;
+  margin-bottom: 30px;
+}
+#gitHubIcon, #twitterIcon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  line-height: 54px;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: var(--gitHubIcon);
+}
+#gitHubIcon {
+  background-image: var(--gitHubIcon);
+}
+#twitterIcon {
+  background-image: var(--twitterIcon);
+}
+
+#generatedPasswordWrapper {
+  position: relative;
+}
+
+#generateNewPassword, #copyPassword {
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 30px;
+  user-select: none;
+  text-align: center;
+  position: absolute;
+  text-transform: uppercase;
+  color: var(--bodyTextColor);
+  border-radius: var(--borderRadius);
+  background-color: var(--checkboxSelectedColor);
+}
+
+#copyPassword {
+  right: 60px;
+}
+
+#generateNewPassword {
+  right: 20px;
+}
+
+#generatedPassword {
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  color: var(--bodyTextColor);
+  border-radius: var(--borderRadius);
+  background-color: var(--checkboxColor);
+}
+
+#passwordStrength {
+  width: 100%;
+  height: 15px;
+  margin-top: 20px;
+  overflow: hidden;
+  background-color: #eee;
+  border-radius: var(--borderRadius);
+  background-color: var(--checkboxColor);
+}
+#passwordStrengthTrack {
+  height: 15px;
+  transition: all 200ms;
+  border-radius: var(--borderRadius);
+}
+#passwordStrengthTrack.weak {
+  background-color: #e74c3d;
+}
+#passwordStrengthTrack.average {
+  background-color: #e77e23;
+}
+#passwordStrengthTrack.strong {
+  background-color: #f1c410;
+}
+#passwordStrengthTrack.secure {
+  background-color: #2fcc71;
+}
+
+.option1 {
+  height: 70px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.option2 {
+  height: 30px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.option1:after, .option2:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.optionCheckboxWrapper {
+  float: left;
+  cursor: pointer;
+  user-select: none;
+}
+.optionCheckboxWrapper.checked .optionCheckbox {
+  background-color: var(--checkboxSelectedColor);
+}
+.optionCheckbox {
+  float: left;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--borderRadius);
+  background-color: var(--checkboxColor);
+}
+.optionCheckboxBigTitle {
+  float: left;
+  margin-left: 16px;
+}
+.optionCheckboxSmallTitle {
+  float: right;
+  line-height: 30px;
+}
+
+.optionCheckboxBigTitle, .optionTitle {
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.optionTitle {
+  float: left;
+}
+.optionValue {
+  float: right;
+  line-height: 30px;
+}
+.optionRange {
+  margin: 0;
+  width: 100%;
+  height: 30px;
+  font-size: 0;
+  outline: none;
+  margin-top: 10px;
+  -webkit-appearance: none;
+  border-radius: var(--borderRadius);
+  background-color: var(--checkboxColor);
+}
+.optionRange::-webkit-slider-thumb {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: var(--borderRadius);
+  background-color: var(--checkboxSelectedColor);
+}
